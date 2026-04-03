@@ -11,12 +11,6 @@ while True:
     if not ret:
       print("cannot recive the frame in the stream")
       continue
-      
-      
-
-    
-    
-
     grayscale=cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
     edged=cv2.Canny(grayscale,30,200)
    
@@ -35,22 +29,14 @@ while True:
     for cnt in contours:
        if cv2.contourArea(cnt) < 500:
         continue
-
        x, y, w, h = cv2.boundingRect(cnt)
-
-    # Draw box
        cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
-
-    # Add label
        cv2.putText(frame, "Object", (x, y-10),
                 cv2.FONT_HERSHEY_SIMPLEX,
                 0.6, (0, 255, 0), 2)
        
     cv2.imshow("contours", frame)
     if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
-    
-
-   
+        break   
 cap.release()
 cv2.destroyAllWindows()
