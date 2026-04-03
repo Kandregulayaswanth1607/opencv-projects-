@@ -34,6 +34,11 @@ To develop strong skills in:
 * Draws the path followed by the object
 * Includes noise reduction and smoothing techniques
 
+
+### 3 vision based robot controller
+ * extended version of the object tracking code
+ * their will be an arrow pointed towards the object for easy navigation.
+
 ---
 
 ## 🛠️ Technologies Used
