@@ -1,3 +1,4 @@
+# version two of the path tracking object project , additionally it will show the arrowed line towards the object.
 import cv2
 import numpy as np
 
@@ -39,6 +40,7 @@ while True:
             x, y, w, h = cv2.boundingRect(cnt)
             cx = x + w // 2
             cy = y + h // 2
+            # new line added , for the arrowed line
             cv2.arrowedLine(frame, (prev_x, prev_y), (cx, cy), (0, 0, 255), 3)
             alpha = 0.2
             cx = int(alpha * cx + (1 - alpha) * prev_x)
