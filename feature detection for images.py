@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-# Read images
+
 img1 = cv2.imread(r"C:\Users\USER\OneDrive\Desktop\right side of room.jpeg")
 img2 = cv2.imread(r"C:\Users\USER\OneDrive\Desktop\left side of room.jpeg")
 img1r=cv2.resize(img1,(640,480))
